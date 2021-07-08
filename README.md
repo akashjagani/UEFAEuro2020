@@ -5,6 +5,9 @@ football match live score. I was used provider as a state management,
 And also i used some standard packages for making better application,
 Thanks you…
 
+## MockUp Picture
+![MockUp](https://user-images.githubusercontent.com/75609621/124912298-68a77880-e00b-11eb-9bdb-b06ba6fc4f43.jpg)
+
 ## SplashScreen
 ![splash_screen](https://user-images.githubusercontent.com/75609621/124904696-e61abb00-e002-11eb-9ddd-db3a4b3bd8d6.png)
 
