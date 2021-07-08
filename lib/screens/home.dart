@@ -54,6 +54,46 @@ class _HomeState extends State<Home> {
     return Drawer(
       child: Container(
         color: kAppBackgroundColor,
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 20.h,
+              ),
+              CircleAvatar(
+                radius: 50.r,
+                backgroundColor: kBoxColor,
+                backgroundImage: AssetImage('assets/images/englandflag.png'),
+              ),
+              SizedBox(
+                height: 50.h,
+              ),
+              ListView.builder(
+                itemCount: kDrawerItemList.length,
+                shrinkWrap: true,
+                itemBuilder: (context, index) => Column(
+                  children: [
+                    Text(
+                      '${kDrawerItemList[index]}',
+                      style: TextStyle(
+                        color: kWhiteColor,
+                        fontSize: 20.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Divider(
+                      color: kUnSelectedIconColor,
+                      height: 50.h,
+                      indent: 30.w,
+                      endIndent: 30.w,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

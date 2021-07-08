@@ -70,8 +70,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                             : kUnSelectedIconColor,
                         borderRadius: BorderRadius.circular(20.r),
                       ),
-                      child: Align(
-                        alignment: Alignment.center,
+                      child: Center(
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 25.w),
                           child: Text(

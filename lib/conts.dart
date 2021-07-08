@@ -9,6 +9,8 @@ const kBottomBarColor = Color(0xFF1A2634);
 const kSelectedIconColor = Color(0xFF9CDDD9);
 const kUnSelectedIconColor = Color(0xFFB0BCCA);
 const kButtonColor = Color(0xFF52D6C1);
+const kRedColor = Color(0xFFCA0926);
+const kBlueColor = Color(0xFF004EBA);
 const kTransparentColor = Colors.transparent;
 
 const List<dynamic> kSelectedBottomBarList = [
@@ -33,4 +35,40 @@ const List<String> kMenuButtonList = [
   'Group B',
   'Group C',
   'Group D',
+];
+
+const List<String> kRedButtonPointList = [
+  '10',
+  '698',
+  '10',
+  '3',
+  '0',
+  '5',
+];
+
+const List<String> kBlueButtonPointList = [
+  '6',
+  '307',
+  '9',
+  '1',
+  '0',
+  '8',
+];
+
+const List<String> kButtonTextPointList = [
+  'Shorts on goal',
+  'Passes attempted',
+  'Fouls',
+  'Yellow cards',
+  'Red cards',
+  'Saves',
+];
+
+const List<String> kDrawerItemList = [
+  'Home',
+  'Profile',
+  'Setting',
+  'Privacy',
+  'Help',
+  'LogOut',
 ];

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uefa_euro/conts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,7 +10,16 @@ class CalenderScreen extends StatefulWidget {
   _CalenderScreenState createState() => _CalenderScreenState();
 }
 
-class _CalenderScreenState extends State<CalenderScreen> {
+class _CalenderScreenState extends State<CalenderScreen>
+    with SingleTickerProviderStateMixin {
+  TabController _tabController;
+
+  @override
+  void initState() {
+    _tabController = TabController(length: 4, vsync: this);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -211,10 +221,308 @@ class _CalenderScreenState extends State<CalenderScreen> {
             SizedBox(
               height: 20.h,
             ),
-            Container(
-              height: 700.h,
-              width: double.infinity,
-              color: kBoxColor,
+            DefaultTabController(
+              length: 4,
+              child: Column(
+                children: [
+                  TabBar(
+                    unselectedLabelColor: kWhiteColor,
+                    labelColor: kButtonColor,
+                    indicatorColor: kButtonColor,
+                    tabs: [
+                      Tab(
+                        child: Expanded(
+                          child: Text(
+                            'Summary',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14.sp,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ),
+                      Tab(
+                        child: Expanded(
+                          child: Text(
+                            'Stats',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14.sp,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ),
+                      Tab(
+                        child: Expanded(
+                          child: Text(
+                            'Lineups',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14.sp,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ),
+                      Tab(
+                        child: Expanded(
+                          child: Text(
+                            'Highlights',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14.sp,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ),
+                    ],
+                    controller: _tabController,
+                    indicatorSize: TabBarIndicatorSize.tab,
+                  ),
+                  Container(
+                    height: 2.h,
+                    width: double.infinity,
+                    color: kUnSelectedIconColor,
+                  ),
+                  SizedBox(
+                    height: 30.h,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '64%',
+                        style: TextStyle(
+                          color: kWhiteColor,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        'Ball possession',
+                        style: TextStyle(
+                          color: kWhiteColor,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        '36%',
+                        style: TextStyle(
+                          color: kWhiteColor,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 6.h,
+                          decoration: BoxDecoration(
+                            color: kRedColor,
+                            borderRadius: BorderRadius.circular(30.r),
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 6.h,
+                                width: 60.w,
+                                decoration: BoxDecoration(
+                                  color: kWhiteColor,
+                                  borderRadius: BorderRadius.circular(30.r),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10.w,
+                      ),
+                      Expanded(
+                        child: Container(
+                          height: 6.h,
+                          decoration: BoxDecoration(
+                            color: kWhiteColor,
+                            borderRadius: BorderRadius.circular(30.r),
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 6.h,
+                                width: 100.w,
+                                decoration: BoxDecoration(
+                                  color: kBlueColor,
+                                  borderRadius: BorderRadius.circular(30.r),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30.h,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '74%',
+                        style: TextStyle(
+                          color: kWhiteColor,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        'Pass accuracy',
+                        style: TextStyle(
+                          color: kWhiteColor,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        '71%',
+                        style: TextStyle(
+                          color: kWhiteColor,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 6.h,
+                          decoration: BoxDecoration(
+                            color: kRedColor,
+                            borderRadius: BorderRadius.circular(30.r),
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 6.h,
+                                width: 50.w,
+                                decoration: BoxDecoration(
+                                  color: kWhiteColor,
+                                  borderRadius: BorderRadius.circular(30.r),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10.w,
+                      ),
+                      Expanded(
+                        child: Container(
+                          height: 6.h,
+                          decoration: BoxDecoration(
+                            color: kWhiteColor,
+                            borderRadius: BorderRadius.circular(30.r),
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 6.h,
+                                width: 90.w,
+                                decoration: BoxDecoration(
+                                  color: kBlueColor,
+                                  borderRadius: BorderRadius.circular(30.r),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30.h,
+                  ),
+                  ListView.builder(
+                    itemCount: kRedButtonPointList.length,
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) => Padding(
+                      padding: EdgeInsets.only(
+                          bottom: index == kRedButtonPointList.length - 1
+                              ? 0
+                              : 20.h),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: 40.h,
+                            width: 50.w,
+                            decoration: BoxDecoration(
+                              color: kRedColor,
+                              borderRadius: BorderRadius.circular(5.r),
+                            ),
+                            child: Center(
+                              child: Text(
+                                '${kRedButtonPointList[index]}',
+                                style: TextStyle(
+                                  color: kWhiteColor,
+                                  fontSize: 16.sp,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Text(
+                            '${kButtonTextPointList[index]}',
+                            style: TextStyle(
+                              color: kWhiteColor,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Container(
+                            height: 40.h,
+                            width: 50.w,
+                            decoration: BoxDecoration(
+                              color: kBlueColor,
+                              borderRadius: BorderRadius.circular(5.r),
+                            ),
+                            child: Center(
+                              child: Text(
+                                '${kBlueButtonPointList[index]}',
+                                style: TextStyle(
+                                  color: kWhiteColor,
+                                  fontSize: 16.sp,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15.h,
             ),
           ],
         ),

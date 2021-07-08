@@ -71,8 +71,7 @@ class _StandingsScreenState extends State<StandingsScreen> {
                             : kUnSelectedIconColor,
                         borderRadius: BorderRadius.circular(20.r),
                       ),
-                      child: Align(
-                        alignment: Alignment.center,
+                      child: Center(
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 25.w),
                           child: Text(
