@@ -113,7 +113,7 @@ class _StandingsScreenState extends State<StandingsScreen> {
               title: 'Group D',
             ),
             SizedBox(
-              height: 20.h,
+              height: 15.h,
             ),
           ],
         ),

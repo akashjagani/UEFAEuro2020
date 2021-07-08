@@ -302,7 +302,7 @@ class _HighlightsScreenState extends State<HighlightsScreen> {
               title: 'Croatia vs. Czech Republic\n1:18',
             ),
             SizedBox(
-              height: 20.h,
+              height: 15.h,
             ),
           ],
         ),

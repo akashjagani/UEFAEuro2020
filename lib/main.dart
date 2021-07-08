@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:uefa_euro/conts.dart';
 import 'package:uefa_euro/device_dimensions.dart';
-import 'package:uefa_euro/screens/home.dart';
+import 'package:uefa_euro/screens/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           title: 'UEFA Euro',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(),
-          home: Home(),
+          home: SplashScreen(),
         );
       },
     );

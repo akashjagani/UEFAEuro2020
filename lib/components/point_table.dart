@@ -262,7 +262,7 @@ class _PointTableState extends State<PointTable> {
                             shape: BoxShape.circle,
                             image: DecorationImage(
                               image:
-                                  AssetImage('assets/images/englandflag.png'),
+                                  AssetImage('assets/images/scotlandflag.jpg'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -494,7 +494,7 @@ class _PointTableState extends State<PointTable> {
                             shape: BoxShape.circle,
                             image: DecorationImage(
                               image:
-                                  AssetImage('assets/images/englandflag.png'),
+                                  AssetImage('assets/images/scotlandflag.jpg'),
                               fit: BoxFit.cover,
                             ),
                           ),
